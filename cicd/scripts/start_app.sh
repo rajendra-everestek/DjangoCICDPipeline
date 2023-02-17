@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["34.231.255.15"]/' /home/ubuntu/DjangoCICDPipeline/cicd/blog/settings.py
+sed -i 's/\[]/\["34.231.255.15"]/' /home/ubuntu/DjangoCICDPipeline/cicd/cicd/settings.py
 
 python manage.py migrate 
 python manage.py makemigrations     
