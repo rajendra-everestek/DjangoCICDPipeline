@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files: 
   - source: /
-    destination: /home/ec2-user/DjangoCICDPipeline/cicd
+    destination: /home/ubuntu/DjangoCICDPipeline/cicd
 permissions:
-  - object: /home/ec2-user/DjangoCICDPipeline/cicd
+  - object: /home/ubuntu/DjangoCICDPipeline/cicd
     owner: ubuntu
     group: ubuntu
 hooks:
