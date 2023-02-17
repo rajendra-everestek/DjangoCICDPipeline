@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-virtualenv /home/ubuntu/env
-source /home/ubuntu/env/bin/activate
-pip install -r /home/ubuntu/DjangoCICDPipeline/cicd/requirements.txt
+virtualenv /home/ec2-user/env
+source /home/ec2-user/env/bin/activate
+pip install -r /home/ec2-user/DjangoCICDPipeline/cicd/requirements.txt
