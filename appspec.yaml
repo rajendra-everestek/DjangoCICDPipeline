@@ -9,28 +9,28 @@ permissions:
     group: ubuntu
 hooks:
   BeforeInstall:
-      - location: scripts/clean_instance.sh
+      - location: cicd/scripts/clean_instance.sh
         timeout: 300
         runas: ubuntu
   AfterInstall:
-      - location: scripts/instance_os_dependencies.sh
+      - location: cicd/scripts/instance_os_dependencies.sh
         timeout: 300
         runas: ubuntu
-      - location: scripts/python_dependencies.sh
+      - location: cicd/scripts/python_dependencies.sh
         timeout: 300
         runas: ubuntu
-      - location: scripts/gunicorn.sh
+      - location: cicd/scripts/gunicorn.sh
         timeout: 300
         runas: ubuntu
-      - location: scripts/nginx.sh
+      - location: cicd/scripts/nginx.sh
         timeout: 300
         runas: ubuntu
   ApplicationStop:
-      - location: scripts/stop_app.sh
+      - location: cicd/scripts/stop_app.sh
         timeout: 300
         runas: ubuntu
   ApplicationStart:
-      - location: scripts/start_app.sh
+      - location: cicd/scripts/start_app.sh
         timeout: 300
         runas: ubuntu
   
