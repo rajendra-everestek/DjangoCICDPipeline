@@ -14,7 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+# from django.urls import path, include
+from django.conf.urls import url, include
 from django.conf import settings # new
 from  django.conf.urls.static import static #new
 from drf_yasg import openapi #new foe swagger
@@ -31,12 +32,12 @@ schema_view = swagger_get_schema_view(
 )
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
-    path('swagger/schema/', schema_view.with_ui('swagger', cache_timeout=0), name="swagger-schema"),
+    url('admin/', admin.site.urls),
+    url('api/', include('api.urls')),
+    url('swagger/schema/', schema_view.with_ui('swagger', cache_timeout=0), name="swagger-schema"),
 
 ]
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_URL)
+# if settings.DEBUG:
+#     urlpatterns + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+#     urlpatterns + static(settings.STATIC_URL, document_root = settings.STATIC_URL)
     

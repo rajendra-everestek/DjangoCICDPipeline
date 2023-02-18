@@ -1,10 +1,11 @@
-from django.urls import path, include
+# from django.urls import path, include
+from django.conf.urls import url, include
 from django.contrib import admin
 
 
 urlpatterns = [
-    path('account/', include('Account.urls')),
-    path('blog/', include('blogapp.urls')),
+    url('account/', include('Account.urls')),
+    url('blog/', include('blogapp.urls')),
 ]
 
 
